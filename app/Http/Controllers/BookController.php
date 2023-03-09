@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function list(Request $request) {
         $search = $request->get('search');
-        $data = Book::with('Author')->Search($search)->orderBy('id','desc')->paginate(20);
+        $data = book::with('author')->Search($search)->orderBy('id','desc')->paginate(20);
         return view("list", compact('data'));
     }
 }
