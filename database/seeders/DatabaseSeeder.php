@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\authors;
+use App\Models\book;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        authors::factory(5)->create();
+        book::factory(1000)->create();
     }
 }
