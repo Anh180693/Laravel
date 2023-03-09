@@ -17,4 +17,8 @@ class book extends Model
         "pub_year",
         "available"
     ];
+
+    public function book() {
+        return $this->hasMany(Book::class);
+    }
 }
